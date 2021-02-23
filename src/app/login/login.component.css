@@ -6,7 +6,7 @@
   }
   
   body{
-    background: url(bg.jpg) no-repeat center;
+    background: url(images.jpg) no-repeat center;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -114,7 +114,14 @@
   .checkbox input:checked + .fa-check{
     opacity: 1;
   }
-  
+  .name-icon{
+    position: absolute;
+    right: 20px;
+    line-height: 70px;
+    color: #9d9d9d;
+    font-size: 22px;
+    cursor: pointer;
+  }
   .btn{
     display: block;
     width: 200px;

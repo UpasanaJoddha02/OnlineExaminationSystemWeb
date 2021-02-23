@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Light, Basic Header</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="testcreate.component.css">
+  
+</head>
+
+<body>
+
+<header class="header-basic-light">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Online<span>ExaminationSystem</span></a></h1>
+
+		<nav>
+			<a href="#" class="selected">Home</a>
+			<a href="#" class="selected"><i class="profile-icon fas fa-user"></i></a>
+			
+		</nav>
+	</div>
+
+</header>
+<div class="area">
+    <form action="#" class="newtest">
+    <div class="textb">
+        <input type="text" required>
+        <div class="placeholder"> Test Name</div>
+        
+      </div>
+      <div class="textb">
+        <input type="time" id="appt" name="appt"
+        min="00:00" max="24:60" required >
+        <div class="placeholder">Time Limit</div> 
+        
+      </div>
+      <div>
+          <div class="checkbox">
+          
+        <input type="checkbox">
+        <div class="fas fa-check"></div>Schedule
+        </div>
+        <div class="scheduleb">
+            
+        <label class="labelb">From</label><input type="date" required>
+        <input type="time" id="appt" name="appt"
+        min="00:00" max="24:60" required><br>
+    
+    
+        <label class="labelb">To&nbsp; &nbsp; &nbsp;</label><input type="date" required>
+        <input type="time" id="appt" name="appt"
+        min="00:00" max="24:60" required >
+    
+    </div>
+      </div>
+    </form>
+</div>
+<nav class="main-menu">
+    <ul>
+        <li>
+            <a href="dashboard">
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                    Dashboard
+                </span>
+            </a>
+          
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fas fa-user"></i>
+                <span class="nav-text">
+                    Profile
+                </span>
+            </a>
+            
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-laptop fa-2x"></i>
+                <span class="nav-text">
+                    Review
+                </span>
+            </a>
+            
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+               <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                    Question Bank
+                </span>
+            </a>
+            
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+               <i class="fa fa-folder-open fa-2x"></i>
+                <span class="nav-text">
+                    History
+                </span>
+            </a>
+           
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Statistics
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+           <a href="login">
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>  
+    </ul>
+</nav>
+</body>
+
+</html>

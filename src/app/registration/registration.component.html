@@ -27,20 +27,20 @@
         <div class="phone-icon fas fa-phone"></div>
       </div>
 
-      <div class="textb">
-        <input list="role" type="text" required >
+      <!--<div class="textb">
+        <input type="text" required >
         <div class="placeholder">Role</div>
       </div>
       
       <div class="textb">
-        <input list="hosting-plan" type="text" placeholder="Role" class="drop-role">
-        
-        <datalist id="hosting-plan">
-              <option value="Teacher"></option>
-              <option value="Student"></option>
-              <option value="Parent"></option>
-        </datalist>
-      </div>
+        <input type="text" placeholder="Role" class="Role-dropdown">
+        <select id="hosting-plan" class="Role-dropdown">
+              <option value="None" selected disabled hidden class="Role-dropdown">Role</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Student">Student</option>
+              <option value="Parent">Parent</option>
+        </select>
+      </div>-->
     <div class="textb">
       <input type="password" required>
       <div class="placeholder">Password</div>
@@ -49,19 +49,23 @@
 
     
 
-    <div class="checkbox">
+    <!--<div class="checkbox">
       <input type="checkbox">
       <div class="fas fa-check"></div>
-      Stay signed in
-    </div>
-
+      Student
+      <input type="checkbox">
+      <div class="fas fa-check"></div>
+      Teacher
+    </div>-->
+    
+  
     <button class="btn">REGISTER</button>
     
-    <a href="#">Already Have An Account?</a>
+    <a href="login">Already Have An Account?</a>
   </form>
 
-  <script src="Role-dropdown.js">
-    /* var fields = document.querySelectorAll(".textb input");
+  <!--<script type="text/javascript">
+    var fields = document.querySelectorAll(".textb input");
     var btn = document.querySelector(".btn");
     function check(){
       if(fields[0].value != "" && fields[1].value != "")
@@ -83,8 +87,8 @@
         this.classList.add("fa-eye-slash");
         fields[1].type = "password";
       }
-    }); */
+    }); 
     
-  </script>
+  </script>-->
 </body>
 </html>
