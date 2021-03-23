@@ -72,7 +72,7 @@ body{
 }
 
 .selected:hover {
-	background-color: #ff6348;
+	background-color: #bc252a;
 	color: #ffffff;
 	border-radius: 3px;
 	padding:6px 10px;
@@ -228,7 +228,7 @@ body {
   }
   .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
   color:#fff;
-  background-color:#ff6348;
+  background-color:#bc252a;
   }
   .area {
   float: left;
@@ -280,7 +280,7 @@ body {
   
   .card-icon{
     font-size: 28px;
-    background: #ff6348;
+    background: #bc252a;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -291,7 +291,7 @@ body {
   
   .card:hover .card-icon{
     background: none;
-    color: #ff6348;
+    color: #bc252a;
     transform: scale(1.6);
   }
   

@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Google Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="questionbank.component.css">
+</head>
+<body>
+    <header class="header-basic-light">
+
+        <div class="header-limiter">
+    
+            <h1><a href="#">Online<span>ExaminationSystem</span></a></h1>
+    
+            <nav>
+                <a href="#" class="selected">Home</a>
+                <a href="#" class="selected"><i class="profile-icon fas fa-user"></i></a>
+                
+            </nav>
+        </div>
+    
+    </header>
+    <div class="questionarea" >
+        <div id="dynamicContainer" class="addarea">
+            <button type="button" (click)="addNewSkills()"  
+             class="addbtn">Add Question</button>
+        
+            <!--Create container for Dynamic Components -->
+            <div #dynamicContainer></div>
+            </div>
+            <div class="btnarea">
+                
+                <button type="button" class="btn">Save</button>
+            </div>
+      </div> 
+      <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="dashboard">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+                </a>
+              
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fas fa-user"></i>
+                    <span class="nav-text">
+                        Profile
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Review
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Question Bank
+                    </span>
+                </a>
+                
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                   <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        History
+                    </span>
+                </a>
+               
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+                    <span class="nav-text">
+                        Statistics
+                    </span>
+                </a>
+            </li>
+        </ul>
+    
+        <ul class="logout">
+            <li>
+               <a href="login">
+                     <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Logout
+                    </span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+</body>
+</html>

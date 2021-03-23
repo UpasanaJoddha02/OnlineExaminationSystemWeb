@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { UserDetailsService } from '../Services/user-details.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,6 +17,10 @@ export class DashboardComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private userDetails: UserDetailsService) { }
 
+  //userRole: string = this.userDetails.UserDetails.role;
+  ngOnInit() {
+    
+  }
 }

@@ -1,0 +1,14 @@
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+.material-icons{
+    cursor: pointer;
+    color:#bc252a ;
+}
+.txtoption{
+    margin-right: 10px;
+    width: 500px;
+    height: 30px;
+}
+input[type=checkbox]:checked:after {
+    height: 25px;
+    width: 25px;
+}

@@ -1,0 +1,36 @@
+.material-icons{
+    cursor: pointer;
+    color:#bc252a ;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+b{
+    margin-right: 10px;
+}
+select{
+    margin-right: 20px;
+}
+.form-inline{
+    border: none;
+    background-color: #ededed;
+    border-radius: 4px;
+    color: #9d9d9d;
+    margin-top: 20px;
+}
+.NgxEditor__Wrapper{
+    margin-top: 20px;
+    border-color: #ededed;
+}
+.addbtn{
+    display: block;
+    width: 100px;
+    height: 35px;
+    margin: 10px 0px;
+    background-color: #9d9d9d;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s linear;
+  }

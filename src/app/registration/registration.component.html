@@ -8,41 +8,49 @@
   <link rel="stylesheet" href="registration.component.css">
 </head>
 <body>
-  <form action="#" class="login-form">
+  <form name="form" action="#" class="login-form">
     <h1>Sign In</h1>
     <div class="textb">
-      <input type="text" required>
+      <input name="name" type="text" required [(ngModel)]="objRegistration.name">
       <div class="placeholder">Name</div>
       <div class="name-icon fas fa-user"></div>
     </div>
     <div class="textb">
-        <input type="text" required>
+        <input name="email" type="text" required [(ngModel)]="objRegistration.email">
         <div class="placeholder">Email</div>
         <div class="mail-icon fa fa-envelope"></div>
       </div>
 
-      <div class="textb">
+      <!--<div class="textb">
         <input type="text" required>
         <div class="placeholder">Phone</div>
         <div class="phone-icon fas fa-phone"></div>
-      </div>
+      </div>-->
 
       <!--<div class="textb">
         <input type="text" required >
         <div class="placeholder">Role</div>
-      </div>
+      </div>-->
       
       <div class="textb">
-        <input type="text" placeholder="Role" class="Role-dropdown">
-        <select id="hosting-plan" class="Role-dropdown">
-              <option value="None" selected disabled hidden class="Role-dropdown">Role</option>
+        <!--<div class="placeholder">Role</div>-->
+            <select name="role" [(ngModel)]="objRegistration.role">
+             <option value="None" selected disabled hidden >Role</option>
               <option value="Teacher">Teacher</option>
               <option value="Student">Student</option>
               <option value="Parent">Parent</option>
         </select>
+        <div class="role-icon fas fa-chalkboard-teacher"></div>
+      </div>
+<!--<div class="textb">
+        <input type="password" required>
+        <div class="placeholder">Role</div>
+        <div class="show-password fas fa-eye-slash" >
+          
+        </div>
       </div>-->
     <div class="textb">
-      <input type="password" required>
+      <input name="password" type="password" required [(ngModel)]="objRegistration.password">
       <div class="placeholder">Password</div>
       <div class="show-password fas fa-eye-slash"></div>
     </div>
@@ -59,7 +67,7 @@
     </div>-->
     
   
-    <button class="btn">REGISTER</button>
+    <button class="btn" (click)="insertRegistration()">REGISTER</button>
     
     <a href="login">Already Have An Account?</a>
   </form>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -16,7 +16,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { TestcreateComponent } from './testcreate/testcreate.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddQuestionComponent } from './add-question/add-question.component';
+import { NgxEditorModule } from 'ngx-editor';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { TestquestionsComponent } from './testquestions/testquestions.component';
+import { AddoptionsComponent } from './addoptions/addoptions.component';
+import { QuestionbankComponent } from './questionbank/questionbank.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,10 +30,15 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    TestcreateComponent
+    TestcreateComponent,
+    AddQuestionComponent,
+    TestquestionsComponent,
+    AddoptionsComponent,
+    QuestionbankComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -37,7 +48,11 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    NgxEditorModule,
+    FroalaEditorModule.forRoot(), 
+    FroalaViewModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
-import {AddQuestionComponent} from 'src/app/add-question/add-question.component';
-import { Routes, RouterModule } from '@angular/router';
+import {AddQuestionComponent} from 'src/app/add-question/add-question.component'
 @Component({
-  selector: 'app-testcreate',
-  templateUrl: './testcreate.component.html',
-  styleUrls: ['./testcreate.component.css']
+  selector: 'app-testquestions',
+  templateUrl: './testquestions.component.html',
+  styleUrls: ['./testquestions.component.css']
 })
-export class TestcreateComponent implements OnInit {
+export class TestquestionsComponent implements OnInit {
   @ViewChild('dynamicContainer', { read: ViewContainerRef }) container: ViewContainerRef;
   skills: any;
   ratings: any;
@@ -44,7 +43,6 @@ export class TestcreateComponent implements OnInit {
       this.embeddedViews = com['_embeddedViews'].length;
     }
   }
-  
   ngOnInit(): void {
   }
 
