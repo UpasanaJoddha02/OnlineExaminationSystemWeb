@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>Google Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="newquestion.component.css">
+</head>
+<body>
+<header class="header-basic-light">
+
+    <div class="header-limiter">
+
+        <h1><a href="#">Online<span>ExaminationSystem</span></a></h1>
+
+        <nav>
+            <a href="#" class="selected">Home</a>
+            <a href="#" class="selected"><i class="profile-icon fas fa-user"></i></a>
+            
+        </nav>
+    </div>
+</header>
+<div class="form-inline">
+    <div class="optarea">
+    <b>Type:</b>
+    <select name="type" class="form-control" style="width:250px;" [(ngModel)]="objQuestion.type">
+        <option *ngFor="let item of qType" [value]="item">{{item}}</option>
+    </select>
+
+    <b>Points: </b>
+    <select name="Points" class="form-control" style="width:70px;" [(ngModel)]="objQuestion.marks">
+        <option *ngFor="let item of ratings" [value]="item">{{item}}</option>
+    </select>
+</div>
+    <div class="NgxEditor__Wrapper"><b>Question:</b>
+    <!--<ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor
+          [editor]="editor"
+          [ngModel]="objQuestion.question"
+          name ="txtquestion"
+    >
+    </ngx-editor>-->
+    <input type="text" class="form-control" name="question" [(ngModel)]="objQuestion.question" style="width: 450px;">
+</div>
+<div class="optionarea">
+    <div>
+    <b>Option 1: </b>
+    <input type="text" name="option1"  class="form-control" [(ngModel)]="objQuestion.option1" style="width: 350px;">
+    <input type="radio" id="option1" name="Answer" value="option1"
+         checked>
+    <label for="option1">Correct</label>
+    </div>
+    <div>
+    <b>Option 2: </b>
+    <input type="text" name="option2"  class="form-control" [(ngModel)]="objQuestion.option2" style="width: 350px;">
+    <input type="radio" id="option2" name="Answer" value="option2"
+         checked>
+    <label for="option2">Correct</label>
+    </div>
+    <div>
+    <b>Option 3: </b>
+    <input type="text" name="option3"  class="form-control" [(ngModel)]="objQuestion.option3" style="width: 350px;">
+    <input type="radio" id="option3" name="Answer" value="option3"
+         checked>
+    <label for="option3">Correct</label>
+    </div>
+    <div>
+    <b>Option 4: </b>
+    <input type="text" name="option4"  class="form-control" [(ngModel)]="objQuestion.option4" style="width: 350px;">
+    <input type="radio" id="option4" name="Answer" value="option4"
+         checked>
+    <label for="option4">Correct</label>
+    </div>
+</div>
+<div>
+    <button type="button" class="addbtn" (click)="insertQuestion()">Save</button>
+</div>
+</div>
+
+<nav class="main-menu">
+    <ul>
+        <li>
+            <a routerLink='/dashboard'>
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                    Dashboard
+                </span>
+            </a>
+          
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fas fa-user"></i>
+                <span class="nav-text">
+                    Profile
+                </span>
+            </a>
+            
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-laptop fa-2x"></i>
+                <span class="nav-text">
+                    Review
+                </span>
+            </a>
+            
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+               <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                    Question Bank
+                </span>
+            </a>
+            
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+               <i class="fa fa-folder-open fa-2x"></i>
+                <span class="nav-text">
+                    History
+                </span>
+            </a>
+           
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Statistics
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+           <a href="login">
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>  
+    </ul>
+</nav>
+</body>
+</html>

@@ -2,7 +2,9 @@ import { OnDestroy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Editor } from 'ngx-editor';
 import { ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
-import { AddoptionsComponent} from 'src/app/addoptions/addoptions.component'
+import { AddoptionsComponent} from 'src/app/addoptions/addoptions.component';
+import { Question } from '../Models/question';
+import { QuestionService } from '../Services/question.service';
 @Component({
   selector: 'app-add-question',
   templateUrl: './add-question.component.html',
@@ -10,19 +12,31 @@ import { AddoptionsComponent} from 'src/app/addoptions/addoptions.component'
 })
 export class AddQuestionComponent implements OnInit,OnDestroy{
   @ViewChild('optionsContainer', { read: ViewContainerRef }) container: ViewContainerRef;
+  isShown: boolean = true ;
   editor: Editor;
   html: '';
   reference: any;
   index: number;
   rowId: number;
   embeddedViews: number = 0;
-  selectedSkill: string;
+  selectedtype: string;
   yearsOfExperiences: string = '0';
   selectedRating: string;
   htmlContent: string;
-  skills: any = [];
+  qType: any = [];
   ratings: any = [];
-  constructor(private comFacResolver: ComponentFactoryResolver) { }
+  /*objquestion: Question = {
+    id: 0,
+    question: '',
+    type: '',
+    answer: '',
+    option1: '',
+    option2: '',
+    option3: '',
+    option4: ''
+    
+  }*/
+  constructor(private comFacResolver: ComponentFactoryResolver,private questionService : QuestionService) { }
   removeSkills() {
     this.reference.destroy();
   }
@@ -32,6 +46,11 @@ export class AddQuestionComponent implements OnInit,OnDestroy{
   ngOnDestroy(): void {
     this.editor.destroy();
   }
+  /*toggleShow() {
+
+    this.isShown = ! this.isShown;
+    
+    }*/
   addoptions(){
     let rows = document.getElementById("optionsContainer");
     let rowIdIndex = rows.innerHTML.indexOf("row");

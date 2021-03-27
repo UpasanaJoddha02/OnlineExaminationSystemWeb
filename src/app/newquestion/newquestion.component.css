@@ -212,60 +212,62 @@ body {
 	  font-weight: 300;
 	  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 	}
-	.btn{
-		display: block;
-		width: 100px;
-		height: 35px;
-		margin-left: 350px;
-		margin-top: 40px;
-		background-color: #bc252a;
-		color: #fff;
-		font-size: 15px;
-		border: none;
-		border-radius: 5px;
-		cursor: pointer;
-		transition: .3s linear;
-	  }
-	.styled-table {
-	margin: 40px auto;
-    margin-left: 300px;
-    width: 50%;
-	padding: 0 20px;
-	border-collapse: collapse;
-	font-size: 0.9em;
-	font-family: sans-serif;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-	}
-	.styled-table thead tr {
-		background-color: #bc252a;
-		color: #ffffff;
-		text-align: left;
-	}
-	.styled-table th,
-.styled-table td {
-    padding: 12px 15px;
-}
-.styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-.styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #bc252a;
-}
-.styled-table tbody tr:hover {
+.material-icons{
     cursor: pointer;
-    color: #bc252a;
-	
+    color:#bc252a ;
+    margin-left: 20px;
+    margin-top: 0px;
 }
-.qrow a{
-	margin-right: 10px;
-	color: #5c616a;
+b{
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.qrow a:hover{
-	cursor: pointer;
-	color: #bc252a;
+select{
+    margin-right: 60px;
+}
+.form-inline{
+    width: 600px;
+    border: none;
+    background-color: #ededed;
+    border-radius: 4px;
+    color: #9d9d9d;
+    margin-top: 20px;
+    margin-left: 300px;
+	align-items: center;
+    justify-content: left;
+}
+
+.NgxEditor__Wrapper{
+    margin-top: 20px;
+    border-color: #ededed;
+}
+.optarea{
+    padding-top: 10px;
+}
+.addbtn{
+    display: block;
+    width: 100px;
+    height: 35px;
+    margin: 10px 0px;
+    background-color: #9d9d9d;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s linear;
+  }
+.optionarea{
+    margin-top: 10px;
+}
+.optionarea input{
+    margin-top: 10px;
+}
+input{
+    margin-right: 10px;
+}
+.txtoption{
+    margin-top: 10px;
+    
+    width: 350px;
 }

@@ -22,23 +22,29 @@
         </div>
     
     </header>
-    <div class="questionarea" >
-        <div id="dynamicContainer" class="addarea">
-            <button type="button" (click)="addNewSkills()"  
-             class="addbtn">Add Question</button>
-        
-            <!--Create container for Dynamic Components -->
-            <div #dynamicContainer></div>
-            </div>
-            <div class="btnarea">
-                
-                <button type="button" class="btn">Save</button>
-            </div>
-      </div> 
+    <button type="button" class="btn" (click)="newQuestion()">New</button>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Question</th>
+                <th>Points</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let question of questions" class="qrow">
+                <td>{{question.id}}</td>
+                <td>{{question.question}}</td>
+                <td>{{question.marks}}</td>
+                <td><a routerLink='/newquestion'>Edit</a><a>Delete</a></td>
+              </tr>
+        </tbody>
+    </table>
       <nav class="main-menu">
         <ul>
             <li>
-                <a href="dashboard">
+                <a routerLink='/dashboard'>
                     <i class="fa fa-home fa-2x"></i>
                     <span class="nav-text">
                         Dashboard

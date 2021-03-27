@@ -1,49 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
-import {AddQuestionComponent} from 'src/app/add-question/add-question.component'
+import {NewquestionComponent} from 'src/app/newquestion/newquestion.component';
+import { QuestionService } from '../Services/question.service'
 @Component({
   selector: 'app-questionbank',
   templateUrl: './questionbank.component.html',
   styleUrls: ['./questionbank.component.css']
 })
 export class QuestionbankComponent implements OnInit {
-  @ViewChild('dynamicContainer', { read: ViewContainerRef }) container: ViewContainerRef;
-  skills: any;
-  ratings: any;
-  rowId: number;
-  data: string;
-  embeddedViews: number = 0;
-  constructor(private comFacResolver: ComponentFactoryResolver) { }
-  addNewSkills() {
-    let rows = document.getElementById("dynamicContainer");
-    let rowIdIndex = rows.innerHTML.indexOf("row");
-    if (rowIdIndex == -1) {
-      this.rowId = 1;
-    }
-
-    this.skills = ['Multiple Choice Question','Fill In The Blanks','Free Text'];
-    this.ratings = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-    let comp = this.comFacResolver.resolveComponentFactory(AddQuestionComponent);
-    let dynamicComp = this.container.createComponent(comp);
-    dynamicComp.instance.reference = dynamicComp;
-
-    dynamicComp.instance.skills = this.skills;
-    dynamicComp.instance.ratings = this.ratings;
-    dynamicComp.instance.index = this.rowId;
-
-    dynamicComp.instance.selectedSkill = '';
-    dynamicComp.instance.yearsOfExperiences = '0';
-    dynamicComp.instance.selectedRating = this.ratings[0];
-
-    this.rowId += 1;
-
-    let com = this.container;
-    if (com !== undefined) {
-      this.embeddedViews = com['_embeddedViews'].length;
-    }
+  questions = [];
+  constructor(private questionService: QuestionService,private _router: Router) { }
+  
+  newQuestion(){
+    this._router.navigate(["newquestion"]);
   }
   ngOnInit(): void {
+    this.getQuestions()
   }
-
+  getQuestions() {
+    this.questionService.getQuestion().subscribe((data) => {
+      this.questions = data;
+      console.log(this.questions);
+    }, (error: any) => {
+      console.log(error);
+    })
+  }
 }

@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="dashboard.component.css">
+  <link rel="stylesheet" href="student-dashboard.component.css">
   
 </head>
 
@@ -41,25 +41,17 @@
     <button class="card">
     <a href="testcreate" class="card">
       <i class="card-icon fas fa-pencil-alt	"></i>
-      <p>Create Test</p>
+      <p>New Test</p>
     </a>
     </button>
         
     <button class="card">
-        <a routerLink='/questionbank' class="card">
-      <i class="card-icon fas fa-clipboard-list"></i>
-      <p>Question Bank</p>
+        <a href="questionbank" class="card">
+      <i class="card-icon fas fa-archive"></i>
+      <p>History</p>
         </a>
 </button>
 </div>
-<div class="line2">
-<button class="card">
-    <div class="card">
-      <i class="card-icon fas fa-archive"></i>
-      <p>History</p>
-    </div>
-  </button>
-  </div>
 </div>
 
 
@@ -92,24 +84,8 @@
             </a>
             
         </li>
-        <li class="has-subnav">
-            <a href="#">
-                <i class="fa fa-laptop fa-2x"></i>
-                <span class="nav-text">
-                    Review
-                </span>
-            </a>
-            
-        </li>
-        <li class="has-subnav">
-            <a routerLink='/questionbank'>
-               <i class="fa fa-list fa-2x"></i>
-                <span class="nav-text">
-                    Question Bank
-                </span>
-            </a>
-            
-        </li>
+        
+        
         <li class="has-subnav">
             <a href="#">
                <i class="fa fa-folder-open fa-2x"></i>

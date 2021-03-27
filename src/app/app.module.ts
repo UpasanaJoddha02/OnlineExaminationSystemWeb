@@ -23,6 +23,8 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { TestquestionsComponent } from './testquestions/testquestions.component';
 import { AddoptionsComponent } from './addoptions/addoptions.component';
 import { QuestionbankComponent } from './questionbank/questionbank.component';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { NewquestionComponent } from './newquestion/newquestion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { QuestionbankComponent } from './questionbank/questionbank.component';
     AddQuestionComponent,
     TestquestionsComponent,
     AddoptionsComponent,
-    QuestionbankComponent
+    QuestionbankComponent,
+    StudentDashboardComponent,
+    NewquestionComponent
   ],
   imports: [
     BrowserModule,

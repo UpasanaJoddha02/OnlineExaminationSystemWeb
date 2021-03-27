@@ -7,8 +7,8 @@
 <body>
     <div class="form-inline" id="row{{index}}">
         <b>Type:</b>
-        <select [(ngModel)]="selectedSkill" class="form-control" style="width:250px;">
-            <option *ngFor="let item of skills" [value]="item">{{item}}</option>
+        <select [(ngModel)]="selectedtype" name="type" class="form-control" style="width:250px;">
+            <option *ngFor="let item of qType" [value]="item">{{item}}</option>
         </select>
     
         <!--<b>Experiences: </b>
@@ -21,8 +21,7 @@
         </select>
     
         <div class="material-icons" (click)="removeSkills()">remove_circle</div>
-        <!--<img src="cross.jpg" width="15" height="15" 
-         title="Remove" (click)="removeSkills()" />-->
+    
          <div class="NgxEditor__Wrapper"><b>Question:</b>
             <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
             <ngx-editor
@@ -33,10 +32,10 @@
           </div>
           
             <div id="optionsContainer" class="optionsarea">
-            <button type="button" class="addbtn" (click)="addoptions()">Add Option</button>
+            <button type="button" class="addbtn" (click)="addoptions()" *ngIf="isShown">Add Option</button>
             <div #optionsContainer></div>
           </div>
-          <!--<div [froalaEditor]>Hello, Froala!</div>-->
+          
     </div>
    </body>
    </html>

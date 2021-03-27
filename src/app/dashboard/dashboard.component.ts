@@ -18,7 +18,7 @@ export class DashboardComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver, private userDetails: UserDetailsService) { }
-
+   name: string = this.userDetails.UserDetails.name;
   //userRole: string = this.userDetails.UserDetails.role;
   ngOnInit() {
     
