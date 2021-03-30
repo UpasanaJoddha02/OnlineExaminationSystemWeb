@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Editor } from 'ngx-editor';
 import { Question } from '../Models/question';
 import { QuestionService } from '../Services/question.service';
+import { UserDetailsService } from '../Services/user-details.service';
 @Component({
   selector: 'app-newquestion',
   templateUrl: './newquestion.component.html',
@@ -11,7 +12,7 @@ import { QuestionService } from '../Services/question.service';
 export class NewquestionComponent implements OnInit {
   editor: Editor;
   html: '';
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService,private userDetailsService: UserDetailsService) { }
   objQuestion: Question = {
     id: 0,
     question: '',
@@ -22,7 +23,7 @@ export class NewquestionComponent implements OnInit {
     option3: '',
     option4: '',
     marks: 0,
-    createdby: 0
+    createdby: this.userDetailsService.UserDetails.id
   }
   qType = ['Multiple Choice Question','Free Text'];
   ratings = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

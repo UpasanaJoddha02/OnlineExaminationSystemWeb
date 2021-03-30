@@ -8,9 +8,10 @@ import { Question } from '../Models/question';
 })
 export class QuestionService {
   insertQuestionURL = APIBaseURL + 'QuestionMasters';
-  getQuestionURL = APIBaseURL + 'QuestionMasters';
-  
+  getQuestionURL = APIBaseURL + 'QuestionMasters/' + 'GetQuestions';
+  deleteQuestionURL = APIBaseURL + 'QuestionMasters';
   constructor(private httpClient: HttpClient) { }
+  QuestionDetails: Question;
 
   insertQuestionDetails(objquestion: Question): Observable<Question> {
     return this.httpClient.post<Question>(this.insertQuestionURL, objquestion, {
@@ -20,9 +21,13 @@ export class QuestionService {
     })
     
   }
-  getQuestion(): Observable<Question[]> {
-    return this.httpClient.get<Question[]>(this.getQuestionURL, {
+  getQuestion(createdby: number): Observable<Question[]> {
+    return this.httpClient.get<Question[]>(this.getQuestionURL + '/' + createdby,{
       responseType: 'json'
+      
     })
+  }
+  deleteQuestion(questionId: number){
+    this.httpClient.delete(this.deleteQuestionURL + '/' + questionId,)
   }
 }

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
 import {NewquestionComponent} from 'src/app/newquestion/newquestion.component';
-import { QuestionService } from '../Services/question.service'
+import { QuestionService } from '../Services/question.service';
+import { UserDetailsService } from '../Services/user-details.service';
 @Component({
   selector: 'app-questionbank',
   templateUrl: './questionbank.component.html',
@@ -10,7 +11,7 @@ import { QuestionService } from '../Services/question.service'
 })
 export class QuestionbankComponent implements OnInit {
   questions = [];
-  constructor(private questionService: QuestionService,private _router: Router) { }
+  constructor(private questionService: QuestionService,private _router: Router,private userDetailsService: UserDetailsService) { }
   
   newQuestion(){
     this._router.navigate(["newquestion"]);
@@ -19,11 +20,14 @@ export class QuestionbankComponent implements OnInit {
     this.getQuestions()
   }
   getQuestions() {
-    this.questionService.getQuestion().subscribe((data) => {
+    this.questionService.getQuestion(this.userDetailsService.UserDetails.id).subscribe((data) => {
       this.questions = data;
       console.log(this.questions);
     }, (error: any) => {
       console.log(error);
     })
+  }
+  deleteQuestion(){
+    this.questionService.deleteQuestion( this.questionService.QuestionDetails.id);
   }
 }
