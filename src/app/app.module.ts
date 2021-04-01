@@ -25,6 +25,7 @@ import { AddoptionsComponent } from './addoptions/addoptions.component';
 import { QuestionbankComponent } from './questionbank/questionbank.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { NewquestionComponent } from './newquestion/newquestion.component';
+import { StudentNewtestComponent } from './student-newtest/student-newtest.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { NewquestionComponent } from './newquestion/newquestion.component';
     AddoptionsComponent,
     QuestionbankComponent,
     StudentDashboardComponent,
-    NewquestionComponent
+    NewquestionComponent,
+    StudentNewtestComponent
   ],
   imports: [
     BrowserModule,

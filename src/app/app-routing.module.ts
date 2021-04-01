@@ -9,6 +9,7 @@ import { NewquestionComponent } from './newquestion/newquestion.component';
 import { QuestionbankComponent } from './questionbank/questionbank.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { StudentNewtestComponent } from './student-newtest/student-newtest.component';
 import { TestcreateComponent } from './testcreate/testcreate.component';
 import { TestquestionsComponent } from './testquestions/testquestions.component';
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'questionbank', component: QuestionbankComponent },
   { path: 'studentDashboard', component: StudentDashboardComponent },
   { path: 'newquestion', component: NewquestionComponent },
+  { path: 'studentNewtest', component: StudentNewtestComponent },
 ];
 
 @NgModule({
