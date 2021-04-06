@@ -26,6 +26,7 @@ import { QuestionbankComponent } from './questionbank/questionbank.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { NewquestionComponent } from './newquestion/newquestion.component';
 import { StudentNewtestComponent } from './student-newtest/student-newtest.component';
+import { TestlistComponent } from './testlist/testlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { StudentNewtestComponent } from './student-newtest/student-newtest.compo
     QuestionbankComponent,
     StudentDashboardComponent,
     NewquestionComponent,
-    StudentNewtestComponent
+    StudentNewtestComponent,
+    TestlistComponent
   ],
   imports: [
     BrowserModule,

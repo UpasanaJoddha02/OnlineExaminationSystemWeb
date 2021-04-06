@@ -8,8 +8,10 @@ import { Question } from '../Models/question';
 })
 export class QuestionService {
   insertQuestionURL = APIBaseURL + 'QuestionMasters';
+  updateQuestionURL = APIBaseURL + 'QuestionMasters';
   getQuestionURL = APIBaseURL + 'QuestionMasters/' + 'GetQuestions';
   deleteQuestionURL = APIBaseURL + 'QuestionMasters';
+  getQuestionByIdURL = APIBaseURL + 'QuestionMasters';
   constructor(private httpClient: HttpClient) { }
   QuestionDetails: Question;
 
@@ -19,15 +21,30 @@ export class QuestionService {
         'Content-Type': 'application/json'
       })
     })
-    
+
+  }
+  updateQuestionDetails(objquestion: Question): Observable<Question> {
+    return this.httpClient.put<Question>(this.updateQuestionURL  + '/' + objquestion.id, objquestion, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    })
+
   }
   getQuestion(createdby: number): Observable<Question[]> {
-    return this.httpClient.get<Question[]>(this.getQuestionURL + '/' + createdby,{
+    return this.httpClient.get<Question[]>(this.getQuestionURL + '/' + createdby, {
       responseType: 'json'
-      
+
     })
   }
-  deleteQuestion(questionId: number){
-    this.httpClient.delete(this.deleteQuestionURL + '/' + questionId,)
+  getQuestionById(id: number): Observable<Question>{
+    return this.httpClient.get<Question>(this.getQuestionByIdURL + '/' + id, {
+      responseType: 'json'
+    })
+  }
+  deleteQuestion(questionId: number): Observable<Question> {
+    return this.httpClient.delete<Question>(this.deleteQuestionURL + '/' + questionId, {
+      responseType: 'json'
+    })
   }
 }

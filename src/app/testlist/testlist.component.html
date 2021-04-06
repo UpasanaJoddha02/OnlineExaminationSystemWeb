@@ -1,0 +1,16 @@
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let test of tests" class="qrow">
+            <td>{{test.testId}}</td>
+            <td>{{test.testName}}</td>
+            <td><a routerLink='/edittest/{{test.testId}}'>Edit</a></td>
+          </tr>
+    </tbody>
+</table>

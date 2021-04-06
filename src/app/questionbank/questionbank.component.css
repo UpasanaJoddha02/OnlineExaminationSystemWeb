@@ -212,36 +212,42 @@ body {
 	  font-weight: 300;
 	  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 	}
-	.btn{
-		display: block;
-		width: 100px;
-		height: 35px;
-		margin-left: 350px;
-		margin-top: 40px;
-		background-color: #bc252a;
-		color: #fff;
-		font-size: 15px;
-		border: none;
-		border-radius: 5px;
-		cursor: pointer;
-		transition: .3s linear;
-	  }
-	.styled-table {
-	margin: 40px auto;
-    margin-left: 300px;
-    width: 50%;
-	padding: 0 20px;
-	border-collapse: collapse;
-	font-size: 0.9em;
-	font-family: sans-serif;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+.btn{
+	display: block;
+	width: 100px;
+	height: 35px;
+	margin-left: 350px;
+	margin-top: 40px;
+	background-color: #bc252a;
+	color: #fff;
+	font-size: 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: .3s linear;
+  }
+.area {
+	float: left;
+	background: #e2e2e2;
+	width: 100%;		
+	height: 100%;
 	}
-	.styled-table thead tr {
-		background-color: #bc252a;
-		color: #ffffff;
-		text-align: left;
-	}
-	.styled-table th,
+.styled-table {
+margin: 40px auto;
+margin-left: 300px;
+width: fit-content;
+padding: 0 20px;
+border-collapse: collapse;
+font-size: 0.9em;
+font-family: sans-serif;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+	background-color: #bc252a;
+	color: #ffffff;
+	text-align: left;
+}
+.styled-table th,
 .styled-table td {
     padding: 12px 15px;
 }

@@ -47,34 +47,31 @@
     <div>
     <b>Option 1: </b>
     <input type="text" name="option1"  class="form-control" [(ngModel)]="objQuestion.option1" style="width: 350px;">
-    <input type="radio" id="option1" name="Answer" value="option1"
-         checked>
+    <input type="radio" id="option1" name="Answer" value="{{objQuestion.option1}}" [(ngModel)]="objQuestion.answer" checked>
     <label for="option1">Correct</label>
     </div>
     <div>
     <b>Option 2: </b>
     <input type="text" name="option2"  class="form-control" [(ngModel)]="objQuestion.option2" style="width: 350px;">
-    <input type="radio" id="option2" name="Answer" value="option2"
-         checked>
+    <input type="radio" id="option2" name="Answer" value="{{objQuestion.option2}}" [(ngModel)]="objQuestion.answer">
     <label for="option2">Correct</label>
     </div>
     <div>
     <b>Option 3: </b>
     <input type="text" name="option3"  class="form-control" [(ngModel)]="objQuestion.option3" style="width: 350px;">
-    <input type="radio" id="option3" name="Answer" value="option3"
-         checked>
+    <input type="radio" id="option3" name="Answer" value="{{objQuestion.option3}}" [(ngModel)]="objQuestion.answer">
     <label for="option3">Correct</label>
     </div>
     <div>
     <b>Option 4: </b>
     <input type="text" name="option4"  class="form-control" [(ngModel)]="objQuestion.option4" style="width: 350px;">
-    <input type="radio" id="option4" name="Answer" value="option4"
-         checked>
+    <input type="radio" id="option4" name="Answer" value="{{objQuestion.option4}}" [(ngModel)]="objQuestion.answer">
     <label for="option4">Correct</label>
     </div>
 </div>
 <div>
-    <button type="button" class="addbtn" (click)="insertQuestion()">Save</button>
+    <button type="button" class="addbtn" (click)="insertQuestion()" *ngIf="!id">Save</button>
+    <button type="button" class="addbtn" (click)="updateQuestion()" *ngIf="id">Update</button>
 </div>
 </div>
 
@@ -108,7 +105,7 @@
             
         </li>
         <li class="has-subnav">
-            <a href="#">
+            <a routerLink='/questionbank'>
                <i class="fa fa-list fa-2x"></i>
                 <span class="nav-text">
                     Question Bank

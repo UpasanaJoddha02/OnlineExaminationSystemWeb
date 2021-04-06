@@ -34,13 +34,13 @@
 <div class="area">
     <form action="#" class="newtest">
     <div class="textb">
-        <input type="text" required>
+        <input type="text" name="testname" required [(ngModel)]="objTestDetails.testName">
         <div class="placeholder"> Test Name</div>
         
       </div>
       <div class="textb">
-        <input type="time" id="appt" name="appt"
-        min="00:00" max="24:60" required >
+        <input type="time" id="appt" name="duration"
+        min="00:00" max="24:60" required [(ngModel)]="objTestDetails.duration">
         <div class="placeholder">Time Limit</div> 
         
       </div>
@@ -53,34 +53,45 @@
         <div class="scheduleb">
             
         <label class="labelb">From</label><input type="date" required>
-        <input type="time" id="appt" name="appt"
+        <input type="time"  name="appt"
         min="00:00" max="24:60" required><br>
     
     
         <label class="labelb">To&nbsp; &nbsp; &nbsp;</label><input type="date" required>
-        <input type="time" id="appt" name="appt"
+        <input type="time" name="appt"
         min="00:00" max="24:60" required >
     
     </div>
       </div>
-      <div>
-        <a href="testquestions"><button type="button" class="addbtn">Next</button></a>
-      </div>
-      <!--<div class="col-md-7" >
-        <div id="dynamicContainer" class="addarea">
-            <button type="button" (click)="addNewSkills()"  
-             class="addbtn">Next</button>
-        -->
-            <!--Create container for Dynamic Components -->
-            <!--<div #dynamicContainer></div>
-            </div>
-      </div> --> 
     </form>
+    <div>
+        <table class="styled-table">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>No.</th>
+                  <th>Question</th>
+                  <th>Points</th>
+                 
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let question of questions" class="qrow">
+                  <td><input type="checkbox" value="question" [(ngModel)]="question.isChecked" (change)="changeSelection()"></td>
+                  <td >{{question.id}}</td>
+                  <td>{{question.question}}</td>
+                  <td>{{question.marks}}</td>
+                  
+                </tr>
+          </tbody>
+      </table> 
+  </div>
+  <div><button class="addbtn" (click)="save()">Save</button></div>
 </div>
 <nav class="main-menu">
     <ul>
         <li>
-            <a href="dashboard">
+            <a routerLink='/dashboard'>
                 <i class="fa fa-home fa-2x"></i>
                 <span class="nav-text">
                     Dashboard

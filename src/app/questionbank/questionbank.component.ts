@@ -27,7 +27,12 @@ export class QuestionbankComponent implements OnInit {
       console.log(error);
     })
   }
-  deleteQuestion(){
-    this.questionService.deleteQuestion( this.questionService.QuestionDetails.id);
+  deleteQuestion(questionId: number){
+    this.questionService.deleteQuestion(questionId).subscribe((data) => {
+      //console.log(data);
+      this.getQuestions();
+    }, (error: any) => {
+      console.log(error);
+    })
   }
 }
