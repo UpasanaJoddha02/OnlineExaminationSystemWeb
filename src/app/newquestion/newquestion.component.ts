@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class NewquestionComponent implements OnInit {
   editor: Editor;
   html: '';
+  
   constructor(private _router: Router,private questionService: QuestionService,private userDetailsService: UserDetailsService, private route: ActivatedRoute) { }
   objQuestion: Question = {
     id: 0,
@@ -27,6 +28,7 @@ export class NewquestionComponent implements OnInit {
     marks: 0,
     createdby: this.userDetailsService.UserDetails.id
   }
+  name: string = this.userDetailsService.UserDetails.name;
   qType = ['Multiple Choice Question','Free Text'];
   ratings = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   id: number = 0;

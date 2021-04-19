@@ -89,8 +89,8 @@
   <div class="btnarea">
     <button class="addbtn" routerLink='/dashboard'>Cancel</button>
     <button class="addbtn" (click)="save()" *ngIf="!id">Save</button>
+    <button class="addbtn" (click)="save()" *ngIf="id">Update</button>
 </div>
-  <div><button class="addbtn" (click)="save()" *ngIf="id">Update</button></div>
 </div>
 <!--<nav class="main-menu">
     <ul>

@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="student-newtest.component.css">
+  <link rel="stylesheet" href="student-history.component.css">
   
 </head>
 
@@ -31,17 +31,24 @@
 	</div>
 
 </header>
-<div class="area">
-    <form action="#" class="newtest">
-    <div class="textb" >
-        <input type="text" name="txtTestId" required [(ngModel)]="TestId">
-        <div class="placeholder"> Test ID</div>
-        
-      </div>
-      
-    <button class="addbtn" routerLink='/viewtest/{{TestId}}'>Next</button>
-    </form>
-    </div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let details of resultList" class="qrow">
+            <td>{{details.testId}}</td>
+            <td>{{details.testName}}</td>
+            <td>{{details.marks}}</td>
+            <td><button routerLink='/edittest/{{test.testId}}'>View</button></td>
+          </tr>
+    </tbody>
+</table>
 <nav class="main-menu">
     <ul>
         <li>

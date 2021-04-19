@@ -8,12 +8,18 @@ import { Result } from '../Models/result';
 })
 export class ResultService {
   getResultByIdURL = APIBaseURL + 'ResultMasters';
+  getResultListByIdURL = APIBaseURL + 'ResultMasters';
   insertResultDetailsURL = APIBaseURL + 'ResultMasters';
 
   constructor(private httpClient: HttpClient) { }
 
   getResultById(TestId: number,StudentId: number): Observable<any>{
     return this.httpClient.get<any>(this.getResultByIdURL + '/' + TestId + '/' + StudentId, {
+      responseType: 'json'
+    })
+  }
+  getResultListById(StudentId: number): Observable<any>{
+    return this.httpClient.get<any>(this.getResultListByIdURL + '/' + StudentId, {
       responseType: 'json'
     })
   }

@@ -295,3 +295,15 @@ body {
     cursor: pointer;
     transition: .3s linear;
   }
+  .main-menu .nav-name{
+    text-transform: capitalize;
+    position:relative;
+    align-items: center;
+    padding-left: 25px;
+    padding-bottom: 20px;
+  display:table-cell;
+  vertical-align:middle;
+  width:220px;
+  font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+  }

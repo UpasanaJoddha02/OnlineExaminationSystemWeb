@@ -29,6 +29,7 @@ import { TestlistComponent } from './testlist/testlist.component';
 import { ViewTestComponent } from './view-test/view-test.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DisplayresultComponent } from './displayresult/displayresult.component';
+import { StudentHistoryComponent } from './student-history/student-history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { DisplayresultComponent } from './displayresult/displayresult.component'
     TestlistComponent,
     ViewTestComponent,
     ProfileComponent,
-    DisplayresultComponent
+    DisplayresultComponent,
+    StudentHistoryComponent
   ],
   imports: [
     BrowserModule,

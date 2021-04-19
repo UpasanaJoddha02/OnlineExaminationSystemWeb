@@ -46,7 +46,7 @@
     </button>
         
     <button class="card">
-        <a href="questionbank" class="card">
+        <a routerLink='/studenthistory' class="card">
       <i class="card-icon fas fa-archive"></i>
       <p>History</p>
         </a>
@@ -59,15 +59,15 @@
     <ul>
         <li>
             
-                <i class="fa fa-home fa-2x"></i>
-                <span class="nav-text">
+                
+                <span class="nav-name">
                     {{name}}
                 </span>
             
           
         </li>
         <li>
-            <a href="dashboard">
+            <a routerLink='/studentDashboard'>
                 <i class="fa fa-home fa-2x"></i>
                 <span class="nav-text">
                     Dashboard
@@ -87,7 +87,7 @@
         
         
         <li class="has-subnav">
-            <a href="#">
+            <a routerLink='/studenthistory'>
                <i class="fa fa-folder-open fa-2x"></i>
                 <span class="nav-text">
                     History
@@ -108,7 +108,7 @@
 
     <ul class="logout">
         <li>
-           <a href="login">
+           <a routerLink='/login'>
                  <i class="fa fa-power-off fa-2x"></i>
                 <span class="nav-text">
                     Logout

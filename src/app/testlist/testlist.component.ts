@@ -9,7 +9,7 @@ import { UserDetailsService } from '../Services/user-details.service';
 export class TestlistComponent implements OnInit {
   tests = [];
   constructor(private testService: TestService, private userDetailsService: UserDetailsService) { }
-
+  name: string = this.userDetailsService.UserDetails.name;
   gettests() {
     this.testService.getTests(this.userDetailsService.UserDetails.id).subscribe((data) => {
       this.tests = data;

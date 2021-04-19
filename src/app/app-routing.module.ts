@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { QuestionbankComponent } from './questionbank/questionbank.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { StudentHistoryComponent } from './student-history/student-history.component';
 import { StudentNewtestComponent } from './student-newtest/student-newtest.component';
 import { TestcreateComponent } from './testcreate/testcreate.component';
 import { TestlistComponent } from './testlist/testlist.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'viewtest/:id', component: ViewTestComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'displayresult/:TestId', component: DisplayresultComponent },
+  { path: 'studenthistory', component: StudentHistoryComponent },
 ];
 
 @NgModule({

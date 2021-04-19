@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   
   constructor(private userDetailsService: UserDetailsService,private registrationService: RegistrationService) { }
 
-  //name: string = this.userDetailsService.UserDetails.name;
+  name: string = this.userDetailsService.UserDetails.name;
   role: string = this.userDetailsService.UserDetails.role;
   //email: string = this.userDetailsService.UserDetails.email;
   //password: string = this.userDetailsService.UserDetails.password;
