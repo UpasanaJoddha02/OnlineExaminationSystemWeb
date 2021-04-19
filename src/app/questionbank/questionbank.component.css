@@ -4,6 +4,7 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 html{
 	background-color: #eaf0f2;
+	height: max-content;
 }
 
 body{
@@ -145,7 +146,18 @@ body {
 	transition:all .1s linear;
 	  
 	}
-	
+	.main-menu .nav-name{
+		text-transform: capitalize;
+		position:relative;
+		align-items: center;
+		padding-left: 25px;
+		padding-bottom: 20px;
+	  display:table-cell;
+	  vertical-align:middle;
+	  width:220px;
+	  font-size: 20px;
+		font-family: 'Titillium Web', sans-serif;
+	  }
 	.main-menu .nav-icon {
 	position:relative;
 	display:table-cell;
@@ -202,7 +214,7 @@ body {
 	}
 	.area {
 	float: left;
-	background: #e2e2e2;
+	/*background: #e5e5e5;*/
 	width: 100%;
 	height: 100%;
 	}
@@ -226,12 +238,7 @@ body {
 	cursor: pointer;
 	transition: .3s linear;
   }
-.area {
-	float: left;
-	background: #e2e2e2;
-	width: 100%;		
-	height: 100%;
-	}
+
 .styled-table {
 margin: 40px auto;
 margin-left: 300px;
@@ -274,4 +281,7 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 .qrow a:hover{
 	cursor: pointer;
 	color: #bc252a;
+}
+.qrow button{
+	margin-right: 5px;
 }

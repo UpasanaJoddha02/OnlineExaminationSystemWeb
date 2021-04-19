@@ -7,7 +7,9 @@ import { UserDetailsService } from '../Services/user-details.service';
 })
 export class StudentDashboardComponent implements OnInit {
 
+  
   constructor(private userDetails: UserDetailsService) { }
+  
   name: string = this.userDetails.UserDetails.name;
   ngOnInit(): void {
   }

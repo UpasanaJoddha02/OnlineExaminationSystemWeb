@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="dashboard.component.css">
+  <link rel="stylesheet" href="profile.component.css">
   
 </head>
 
@@ -31,51 +31,40 @@
 	</div>
 
 </header>
-
-<!-- The content of your page would go here. -->
-
-
 <div class="area">
-  <div class="contact-info">
-      
-    <button class="card">
-    <a routerLink='/testcreate' class="card">
-      <i class="card-icon fas fa-pencil-alt	"></i>
-      <p>Create Test</p>
-    </a>
-    </button>
-        
-    <button class="card">
-        <a routerLink='/questionbank' class="card">
-      <i class="card-icon fas fa-clipboard-list"></i>
-      <p>Question Bank</p>
-        </a>
-</button>
-</div>
-<div class="line2">
-<button class="card">
-    <div class="card">
-      <i class="card-icon fas fa-archive"></i>
-      <p>History</p>
+    <form action="#" class="profileinfo">
+    <div class="textb">
+        <input type="text" name="name" [disabled]="isDisabled" [(ngModel)]="objprofileinfo.name">
+        <div class="placeholder">Name</div>
     </div>
-  </button>
-  </div>
+    <div class="textb">
+        <input type="text" name="email" [disabled]="isDisabled" [(ngModel)]="objprofileinfo.email">
+        <div class="placeholder">Email</div>
+    </div>
+    <div class="textb">
+        <input type="text" name="role" [disabled]="isDisabled" [(ngModel)]="objprofileinfo.role">
+        <div class="placeholder">Role</div>
+    </div>
+    <div class="textb">
+    <button class="addbtn" (click)="enable()" *ngIf="isDisabled">Edit</button>
+    <button class="addbtn" *ngIf="!isDisabled" (click)="save()">Save</button>
+    </div>
+    
+</form>
 </div>
-
-
-  <nav class="main-menu">
+<nav class="main-menu" *ngIf="role === 'Teacher'">
     <ul>
         <li>
             
-                
-                <span class="nav-name">
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
                     {{name}}
                 </span>
             
           
         </li>
         <li>
-            <a routerLink='/dashboard'>
+            <a href="dashboard">
                 <i class="fa fa-home fa-2x"></i>
                 <span class="nav-text">
                     Dashboard
@@ -84,7 +73,7 @@
           
         </li>
         <li class="has-subnav">
-            <a routerLink='/profile'>
+            <a href="#">
                 <i class="fa fas fa-user"></i>
                 <span class="nav-text">
                     Profile
@@ -132,7 +121,69 @@
 
     <ul class="logout">
         <li>
-           <a routerLink='/login'>
+           <a href="login">
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>  
+    </ul>
+</nav>
+<nav class="main-menu" *ngIf="role === 'Student'">
+    <ul>
+        <li>
+            
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                    {{name}}
+                </span>
+            
+          
+        </li>
+        <li>
+            <a href="dashboard">
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                    Dashboard
+                </span>
+            </a>
+          
+        </li>
+        <li class="has-subnav">
+            <a routerLink='/profile'>
+                <i class="fa fas fa-user"></i>
+                <span class="nav-text">
+                    Profile
+                </span>
+            </a>
+            
+        </li>
+        
+        
+        <li class="has-subnav">
+            <a href="#">
+               <i class="fa fa-folder-open fa-2x"></i>
+                <span class="nav-text">
+                    History
+                </span>
+            </a>
+           
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Statistics
+                </span>
+            </a>
+        </li>
+       
+    </ul>
+
+    <ul class="logout">
+        <li>
+           <a href="login">
                  <i class="fa fa-power-off fa-2x"></i>
                 <span class="nav-text">
                     Logout

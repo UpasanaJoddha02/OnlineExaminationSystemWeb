@@ -1,0 +1,23 @@
+<header class="header-basic-light">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Online<span>ExaminationSystem</span></a></h1>
+
+		<nav>
+			<a href="#" class="selected">Home</a>
+			<a href="#" class="selected"><i class="profile-icon fas fa-user"></i></a>
+			
+		</nav>
+	</div>
+
+</header>
+<div class="area" *ngFor="let marks of result">
+    <div class="points"> Total Correct Answers:{{marks.totalCorrectAnswers}}</div>
+    <div class="points"> Total Marks:{{marks.totalMarks}}</div>
+	<button>
+		<a routerLink='/studentDashboard'>Dashboard</a>
+	</button>
+</div>
+
+

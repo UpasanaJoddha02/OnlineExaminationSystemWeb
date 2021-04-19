@@ -38,13 +38,22 @@
                 <td>{{question.id}}</td>
                 <td>{{question.question}}</td>
                 <td>{{question.marks}}</td>
-                <td><a routerLink='/editquestion/{{question.id}}'>Edit</a><button (click)="deleteQuestion(question.id)">Delete</button></td>
+                <td><button routerLink='/editquestion/{{question.id}}'>Edit</button><button (click)="deleteQuestion(question.id)">Delete</button></td>
               </tr>
         </tbody>
     </table>
 </div>
       <nav class="main-menu">
         <ul>
+            <li>
+            
+                
+                <span class="nav-name">
+                    {{name}}
+                </span>
+            
+          
+        </li>
             <li>
                 <a routerLink='/dashboard'>
                     <i class="fa fa-home fa-2x"></i>
@@ -55,7 +64,7 @@
               
             </li>
             <li class="has-subnav">
-                <a href="#">
+                <a routerLink='/profile'>
                     <i class="fa fas fa-user"></i>
                     <span class="nav-text">
                         Profile
@@ -64,7 +73,7 @@
                 
             </li>
             <li class="has-subnav">
-                <a href="#">
+                <a routerLink='/testlist'>
                     <i class="fa fa-laptop fa-2x"></i>
                     <span class="nav-text">
                         Review
@@ -73,7 +82,7 @@
                 
             </li>
             <li class="has-subnav">
-                <a href="#">
+                <a routerLink='/questionbank'>
                    <i class="fa fa-list fa-2x"></i>
                     <span class="nav-text">
                         Question Bank
@@ -102,7 +111,7 @@
     
         <ul class="logout">
             <li>
-               <a href="login">
+               <a routerLink='/login'>
                      <i class="fa fa-power-off fa-2x"></i>
                     <span class="nav-text">
                         Logout

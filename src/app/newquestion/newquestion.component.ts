@@ -5,6 +5,7 @@ import { Question } from '../Models/question';
 import { QuestionService } from '../Services/question.service';
 import { UserDetailsService } from '../Services/user-details.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-newquestion',
   templateUrl: './newquestion.component.html',
@@ -13,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 export class NewquestionComponent implements OnInit {
   editor: Editor;
   html: '';
-  constructor(private questionService: QuestionService,private userDetailsService: UserDetailsService, private route: ActivatedRoute) { }
+  constructor(private _router: Router,private questionService: QuestionService,private userDetailsService: UserDetailsService, private route: ActivatedRoute) { }
   objQuestion: Question = {
     id: 0,
     question: '',
@@ -44,12 +45,14 @@ export class NewquestionComponent implements OnInit {
     this.objQuestion.marks = parseInt(this.objQuestion.marks.toString());
     this.questionService.insertQuestionDetails(this.objQuestion).subscribe((data) => {
       console.log(data);
+      this._router.navigate(["questionbank"]);
     });
   }
   updateQuestion() {
     this.objQuestion.marks = parseInt(this.objQuestion.marks.toString());
     this.questionService.updateQuestionDetails(this.objQuestion).subscribe((data) => {
       console.log(data);
+      this._router.navigate(["questionbank"]);
     });
   }
 }

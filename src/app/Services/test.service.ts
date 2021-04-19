@@ -12,6 +12,7 @@ export class TestService {
   getTestByIdURL = APIBaseURL + 'TestMasters';
   insertTestDetailsURL = APIBaseURL + 'TestMasters';
   insertTestQuestionsURl = APIBaseURL + 'TestQuestionMappings';
+  
 
 
   constructor(private httpClient: HttpClient) { }
@@ -28,6 +29,7 @@ export class TestService {
       responseType: 'json'
     })
   }
+
   insertTestDetails(objTestDetails: Test): Observable<Test> {
     return this.httpClient.post<Test>(this.insertTestDetailsURL, objTestDetails, {
       headers: new HttpHeaders({

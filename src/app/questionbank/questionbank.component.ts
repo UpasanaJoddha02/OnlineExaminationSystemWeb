@@ -12,7 +12,7 @@ import { UserDetailsService } from '../Services/user-details.service';
 export class QuestionbankComponent implements OnInit {
   questions = [];
   constructor(private questionService: QuestionService,private _router: Router,private userDetailsService: UserDetailsService) { }
-  
+  name: string = this.userDetailsService.UserDetails.name;
   newQuestion(){
     this._router.navigate(["newquestion"]);
   }

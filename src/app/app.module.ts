@@ -20,13 +20,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
-import { TestquestionsComponent } from './testquestions/testquestions.component';
 import { AddoptionsComponent } from './addoptions/addoptions.component';
 import { QuestionbankComponent } from './questionbank/questionbank.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { NewquestionComponent } from './newquestion/newquestion.component';
 import { StudentNewtestComponent } from './student-newtest/student-newtest.component';
 import { TestlistComponent } from './testlist/testlist.component';
+import { ViewTestComponent } from './view-test/view-test.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DisplayresultComponent } from './displayresult/displayresult.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +38,16 @@ import { TestlistComponent } from './testlist/testlist.component';
     DashboardComponent,
     TestcreateComponent,
     AddQuestionComponent,
-    TestquestionsComponent,
+    
     AddoptionsComponent,
     QuestionbankComponent,
     StudentDashboardComponent,
     NewquestionComponent,
     StudentNewtestComponent,
-    TestlistComponent
+    TestlistComponent,
+    ViewTestComponent,
+    ProfileComponent,
+    DisplayresultComponent
   ],
   imports: [
     BrowserModule,

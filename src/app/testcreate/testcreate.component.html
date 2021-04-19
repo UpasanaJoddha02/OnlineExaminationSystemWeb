@@ -47,19 +47,19 @@
       <div>
           <div class="checkbox">
           
-        <input type="checkbox">
+        <input type="checkbox" (click)="schedule()">
         <div class="fas fa-check"></div>&nbsp; &nbsp;&nbsp; &nbsp;Schedule
         </div>
         <div class="scheduleb">
             
-        <label class="labelb">From</label><input type="date" required>
+        <label class="labelb">From</label><input type="date" required [disabled]="isEnabled">
         <input type="time"  name="appt"
-        min="00:00" max="24:60" required><br>
+        min="00:00" max="24:60" required [disabled]="isEnabled"><br>
     
     
-        <label class="labelb">To&nbsp; &nbsp; &nbsp;</label><input type="date" required>
+        <label class="labelb">To&nbsp; &nbsp; &nbsp;</label><input type="date" required [disabled]="isEnabled">
         <input type="time" name="appt"
-        min="00:00" max="24:60" required >
+        min="00:00" max="24:60" required [disabled]="isEnabled">
     
     </div>
       </div>
@@ -86,9 +86,13 @@
           </tbody>
       </table> 
   </div>
-  <div><button class="addbtn" (click)="save()">Save</button></div>
+  <div class="btnarea">
+    <button class="addbtn" routerLink='/dashboard'>Cancel</button>
+    <button class="addbtn" (click)="save()" *ngIf="!id">Save</button>
 </div>
-<nav class="main-menu">
+  <div><button class="addbtn" (click)="save()" *ngIf="id">Update</button></div>
+</div>
+<!--<nav class="main-menu">
     <ul>
         <li>
             <a routerLink='/dashboard'>
@@ -118,7 +122,7 @@
             
         </li>
         <li class="has-subnav">
-            <a href="#">
+            <a routerLink='/questionbank'>
                <i class="fa fa-list fa-2x"></i>
                 <span class="nav-text">
                     Question Bank
@@ -155,7 +159,7 @@
             </a>
         </li>  
     </ul>
-</nav>
+</nav>-->
 
 </body>
 

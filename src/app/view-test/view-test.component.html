@@ -1,0 +1,38 @@
+<header class="header-basic-light">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Online<span>ExaminationSystem</span></a></h1>
+
+		<nav>
+			<a href="#" class="selected">Home</a>
+			<a href="#" class="selected"><i class="profile-icon fas fa-user"></i></a>
+			
+		</nav>
+	</div>
+
+</header>
+<form>
+<div class="Questionarea" *ngFor="let question of questions; index as i">
+    <div class="question">{{question.question}} <span class="points"> Points:{{question.marks}} </span></div>
+    
+    <div class="options">
+        <input type="radio" id="{{question.option1}}" name="Answer{{i}}" value="{{question.option1}}" [(ngModel)]="question.SelectedAnswer">
+        <label for="{{question.option1}}">{{question.option1}}</label>
+    </div>
+    <div class="options">
+        <input type="radio" id="{{question.option2}}" name="Answer{{i}}" value="{{question.option2}}" [(ngModel)]="question.SelectedAnswer">
+        <label for="{{question.option2}}">{{question.option2}}</label>
+    </div>
+    <div class="options">
+        <input type="radio" id="{{question.option3}}" name="Answer{{i}}" value="{{question.option3}}" [(ngModel)]="question.SelectedAnswer">
+        <label for="{{question.option3}}">{{question.option3}}</label>
+    </div>
+    <div class="options">
+        <input type="radio" id="{{question.option4}}" name="Answer{{i}}" value="{{question.option4}}" [(ngModel)]="question.SelectedAnswer">
+        <label for="{{question.option4}}">{{question.option4}}</label>
+    </div>
+    
+</div>
+<div><button class="addbtn" (click)="save()" (click)="next()">Save</button></div>
+</form>

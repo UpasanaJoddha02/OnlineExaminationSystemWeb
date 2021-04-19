@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserDetailsService } from '../Services/user-details.service';
+import { TestService } from '../Services/test.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-newtest',
@@ -8,8 +10,19 @@ import { UserDetailsService } from '../Services/user-details.service';
 })
 export class StudentNewtestComponent implements OnInit {
 
-  constructor(private userDetails: UserDetailsService) { }
-  
+TestId: number;
+
+  constructor(private _router: Router,private userDetails: UserDetailsService,private TestService: TestService) { }
+  //studentId: number = this.userDetails.UserDetails.id;
+  name: string = this.userDetails.UserDetails.name;
+
+  /*next(testid: number){
+    this.TestId = testid
+    
+      this._router.navigate(["viewtest/{{testid}}"]);
+    
+    
+  }*/
   ngOnInit(): void {
   }
 

@@ -16,6 +16,7 @@ import { QuestionService } from '../Services/question.service';
   styleUrls: ['./testcreate.component.css']
 })
 export class TestcreateComponent implements OnInit {
+  isEnabled: boolean = true;
   isShown: boolean = false;
   questions = [];
   selectedItemsList = [];
@@ -47,6 +48,7 @@ export class TestcreateComponent implements OnInit {
   save() {
     this.testService.insertTestDetails(this.objTestDetails).subscribe((data) => {
       this.testService.TestDetails = data;
+      debugger
       for (let index = 0; index < this.checkedIDs.length; index++) {
         this.objTestQuestions.questionId = this.checkedIDs[index];
         this.objTestQuestions.testId = this.testService.TestDetails.testId;
@@ -77,6 +79,9 @@ export class TestcreateComponent implements OnInit {
       }
     });
   }
+  schedule(){
+    this.isEnabled = false; 
+    }
   ngOnInit(): void {
     this.getQuestions()
     this.id = this.route.snapshot.params['id'];

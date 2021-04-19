@@ -18,7 +18,7 @@
     <div class="textb">
         <input name="email" type="text" required [(ngModel)]="objRegistration.email">
         <div class="placeholder">Email</div>
-        <div class="mail-icon fa fa-envelope"></div>
+        <div class="mail-icon fas fa-envelope"></div>
       </div>
 
       <!--<div class="textb">
@@ -38,7 +38,7 @@
              <option value="None" selected disabled hidden >Role</option>
               <option value="Teacher">Teacher</option>
               <option value="Student">Student</option>
-              <option value="Parent">Parent</option>
+              
         </select>
         <div class="role-icon fas fa-chalkboard-teacher"></div>
       </div>
@@ -67,9 +67,9 @@
     </div>-->
     
   
-    <button class="btn" (click)="insertRegistration()">REGISTER</button>
+    <button class="btn" (click)="insertRegistration()" routerLink='/login'>REGISTER</button>
     
-    <a href="login">Already Have An Account?</a>
+    <a routerLink='/login'>Already Have An Account?</a>
   </form>
 
   <!--<script type="text/javascript">

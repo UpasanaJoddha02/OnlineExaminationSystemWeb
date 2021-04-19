@@ -33,12 +33,13 @@
 </header>
 <div class="area">
     <form action="#" class="newtest">
-    <div class="textb">
-        <input type="text" required>
+    <div class="textb" >
+        <input type="text" name="txtTestId" required [(ngModel)]="TestId">
         <div class="placeholder"> Test ID</div>
         
       </div>
-    <button class="addbtn">Next</button>
+      
+    <a routerLink='/viewtest/{{TestId}}'>Next</a>
     </form>
     </div>
 <nav class="main-menu">

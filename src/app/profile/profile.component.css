@@ -4,7 +4,6 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 html{
 	background-color: #eaf0f2;
-  height: max-content;
 }
 
 body{
@@ -21,7 +20,7 @@ body{
 }
 
 .tz-link span{
-	color: #bc252a;
+	color: #da431c;
 }
 .header-basic-light{
 	padding: 20px 40px;
@@ -47,7 +46,7 @@ body{
 }
 
 .header-basic-light .header-limiter h1 span {
-	color: #bc252a;
+	color: #d4585e;
 }
 
 /* The header links */
@@ -198,7 +197,7 @@ body {
   .main-menu>ul.logout {
   position:absolute;
   left:0;
-  bottom:0;
+  bottom: 0;
   }
   
   .no-touch .scrollable.hover {
@@ -232,162 +231,62 @@ body {
   background-color:#bc252a;
   }
   .area {
-  float: left;
-  background: #e2e2e2;
-  width: 100%;
-  height: 100%;
-  }
-  @font-face {
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
-  }
-  .newtest{
-    margin: 40px auto;
-    margin-left: 50px;
-    
-    align-items: center;
-    justify-content: left;
-    max-width: 500px;
-    padding: 10px 40px;
-  }
-  .textb{
-    margin-bottom: 12px;
-    position:relative;
-    margin-right: 20px;
-  }
-  .scheduleb input{
-    background-color: #ededed;
-    border-radius: 4px;
-    color: #9d9d9d;
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 14px 5px 0 10px;
-    right: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    float: left;
+    background: #e2e2e2;
+    width: 100%;
+    height: 100%;
     }
-  .scheduleb label{
-    margin-right: 10px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    color: #9d9d9d;
-  }
-  .textb input{
-    width: 100%;
-    height: 40px;
-    border: none;
-    background-color: #ededed;
-    border-radius: 4px;
-    color: #333;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 14px 60px 0 10px;
-    right: 10px;
-  }
-  .fieldb{
-    width: 100%;
-    height: 40px;
-    border: none;
-    background-color: #ededed;
-    border-radius: 4px;
-    color: #333;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 14px 60px 0 10px;
-    right: 10px;
-  }
-  .textb select{
-    width: 100%;
-    height: 70px;
-    border: none;
-    background-color: #ededed;
-    border-radius: 4px;
-    color: #bc252a;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 14px 60px 0 10px;
-  }
-  .placeholder{
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    position: absolute;
-    line-height: 35px;
-    top: 0px;
-    left: 10px;
-    color: #9d9d9d;
-    user-select: none;
-    pointer-events: none;
-  }
-  .checkbox{
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 20px 0px;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    color: #9d9d9d;
-    
-  }
-  .time-pic{
-    display: flex;
-    align-items: center;
-    position: relative;
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-    margin: 20px 0;
-  }
-  .checkbox input{
-    width: 24px;
-    height: 24px;
-    -webkit-appearance: none;
-    background-color: #ededed;
-    border-radius: 4px;
-    margin-right: 10px;
-    margin-left: 0px;
-    cursor: pointer;
-  }
+    .profileinfo{
+      margin: 40px auto;
+      margin-left: 260px;
+      
+      align-items: center;
+      justify-content: left;
+      max-width: 500px;
+      padding: 10px 40px;
+    }
+    .textb{
+      margin-bottom: 12px;
+      position:relative;
+      margin-right: 20px;
+    }
+
+    .textb input{
+      width: 100%;
+      height: 50px;
+      border: none;
+      background-color: #ededed;
+      border-radius: 4px;
+      color: #333;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 14px 60px 0 10px;
+      right: 10px;
+    }
   
-  .checkbox .fa-check{
-    position: absolute;
-    color: #fff;
-    font-size: 14px;
-    width: 24px;
-    text-align: center;
-    user-select: none;
-    pointer-events: none;
-    opacity: 0;
-  }
-  
-  .checkbox input:checked{
-    background-color: #bc252a;
-  }
-  
-  .checkbox input:checked + .fa-check{
-    opacity: 1;
-  }
-  
-  
-  .textb input:focus ~ .placeholder,
+    .placeholder{
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      position: absolute;
+      line-height: 35px;
+      top: -2px;
+      left: 10px;
+      color: #9d9d9d;
+      user-select: none;
+      pointer-events: none;
+    }
+    .textb input:focus ~ .placeholder,
   
   .textb input:valid ~ .placeholder{
     left: 10px;
-    top: -10px;
+    top: -7px;
     color: #bc252a;
   }
   .addbtn{
-    display: inline-block;
+    display: block;
     width: 100px;
     height: 40px;
-    margin-left: 200px;
     background-color: #bc252a;
     color: #fff;
     font-size: 20px;
@@ -396,50 +295,3 @@ body {
     cursor: pointer;
     transition: .3s linear;
   }
-  .styled-table {
-    margin: 40px auto;
-      margin-left: 95px;
-      width: 50%;
-    padding: 0 20px;
-    border-collapse: collapse;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    }
-    .styled-table thead tr {
-      background-color: #bc252a;
-      color: #ffffff;
-      text-align: left;
-    }
-    .styled-table th,
-  .styled-table td {
-      padding: 12px 15px;
-  }
-  .styled-table tbody tr {
-      border-bottom: 1px solid #dddddd;
-  }
-  
-  .styled-table tbody tr:nth-of-type(even) {
-      background-color: #f3f3f3;
-  }
-  
-  .styled-table tbody tr:last-of-type {
-      border-bottom: 2px solid #bc252a;
-  }
-  .styled-table tbody tr:hover {
-      cursor: pointer;
-      color: #bc252a;
-    
-  }
-  .qrow a{
-    margin-right: 10px;
-    color: #5c616a;
-  }
-  .qrow a:hover{
-    cursor: pointer;
-    color: #bc252a;
-  }
-.btnarea{
-  width: 800px;
-  margin-bottom: 100px;
-}

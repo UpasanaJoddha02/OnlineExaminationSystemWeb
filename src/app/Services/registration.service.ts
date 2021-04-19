@@ -10,6 +10,8 @@ import { Registration } from '../Models/registration';
 export class RegistrationService {
   insertRegistrationURL = APIBaseURL + 'Registrations';
   getRegistrationURL = APIBaseURL + 'Registrations';
+  getRegistrationByIdURL = APIBaseURL + 'Registrations';
+  updateRegistrationURL = APIBaseURL + 'Registrations';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,7 +20,11 @@ export class RegistrationService {
       responseType: 'json'
     })
   }
-
+  getRegistrationById(id: number): Observable<Registration>{
+    return this.httpClient.get<Registration>(this.getRegistrationByIdURL + '/' + id, {
+      responseType: 'json'
+    })
+  }
   insertRegistrationDetails(objRegistration: Registration): Observable<Registration> {
     return this.httpClient.post<Registration>(this.insertRegistrationURL, objRegistration, {
       headers: new HttpHeaders({
@@ -27,4 +33,12 @@ export class RegistrationService {
     })
   }
 
+  updateRegistrationDetails(objRegistration: Registration): Observable<Registration> {
+    return this.httpClient.put<Registration>(this.updateRegistrationURL  + '/' + objRegistration.id, objRegistration, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    })
+
+  }
 }

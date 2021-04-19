@@ -12,6 +12,8 @@ export class QuestionService {
   getQuestionURL = APIBaseURL + 'QuestionMasters/' + 'GetQuestions';
   deleteQuestionURL = APIBaseURL + 'QuestionMasters';
   getQuestionByIdURL = APIBaseURL + 'QuestionMasters';
+  getQuestionsByTestIdURL = APIBaseURL + 'QuestionMasters/' +  'GetQuestionsByTestId';
+
   constructor(private httpClient: HttpClient) { }
   QuestionDetails: Question;
 
@@ -44,6 +46,12 @@ export class QuestionService {
   }
   deleteQuestion(questionId: number): Observable<Question> {
     return this.httpClient.delete<Question>(this.deleteQuestionURL + '/' + questionId, {
+      responseType: 'json'
+    })
+  }
+
+  getQuestionsByTestId(id: number): Observable<Question[]>{
+    return this.httpClient.get<Question[]>(this.getQuestionsByTestIdURL + '/' + id, {
       responseType: 'json'
     })
   }
